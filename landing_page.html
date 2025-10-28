@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Template Halaman - Sederhana & Responsif</title>
+  <meta name="description" content="Contoh file HTML single-page siap pakai: hero, fitur, galeri, dan form kontak." />
+  <style>
+    /* Reset sederhana */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.4;color:#0f172a}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{font-weight:700;font-size:20px}
+    nav a{margin-left:16px;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:36px 0}
+    .hero h1{font-size:34px;margin-bottom:12px}
+    .hero p{color:#475569}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;background:#0ea5a4;color:white;font-weight:700}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:28px 0}
+    .card{padding:18px;border-radius:12px;background:linear-gradient(180deg, #ffffff, #fbfbfd);box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .card h3{margin-bottom:8px}
+    .muted{color:#6b7280;font-size:14px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:22px 0}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr;gap:12px;padding:18px;border-radius:12px;background:#f8fafc}
+    .field{display:flex;flex-direction:column}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6edf3}
+    button[type=submit]{padding:10px 14px;border-radius:10px;border:0;background:#6366f1;color:#fff;font-weight:700}
+
+    /* Footer */
+    footer{margin-top:34px;padding:20px 0;color:#64748b;font-size:14px;text-align:center}
+
+    /* Responsive tweaks */
+    @media(min-width:900px){
+      .hero{grid-template-columns:1fr 420px}
+      .contact{grid-template-columns:1fr 360px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">MySite<span style="color:#0ea5a4">.</span></div>
+      <nav>
+        <a href="#features">Fitur</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <h1>Buat Halaman Web Sederhana — Cepat & Responsif</h1>
+          <p>Template ini cocok untuk prototipe, portofolio, atau halaman produk kecil. Edit teks, gambar, dan warna sesuai kebutuhanmu.</p>
+          <a class="cta" href="#contact">Hubungi Kami</a>
+
+          <section id="features">
+            <h2 style="margin-top:26px;margin-bottom:12px">Fitur Utama</h2>
+            <div class="features">
+              <article class="card">
+                <h3>Responsif</h3>
+                <p class="muted">Tampilan yang rapi di desktop, tablet, dan ponsel.</p>
+              </article>
+
+              <article class="card">
+                <h3>Mudah Dikustom</h3>
+                <p class="muted">Semua elemen berada di satu file, gampang untuk diedit.</p>
+              </article>
+
+              <article class="card">
+                <h3>Form Kontak</h3>
+                <p class="muted">Form sederhana dengan validasi klien (JS) siap pakai.</p>
+              </article>
+
+              <article class="card">
+                <h3>Galeri</h3>
+                <p class="muted">Grid gambar yang bisa kamu ganti dengan foto sendiri.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <aside style="padding:18px;border-radius:12px;background:#f1f5f9">
+          <h3>Ringkasan Cepat</h3>
+          <p class="muted">Template single-page, cocok untuk presentasi cepat atau sebagai starting point proyek web.</p>
+          <ul style="margin-top:12px;color:#334155">
+            <li>HTML + CSS + sedikit JS</li>
+            <li>No build tools — langsung buka di browser</li>
+            <li>Edit mudah: ubah teks, gambar, dan warna</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="gallery">
+        <h2 style="margin:18px 0">Galeri</h2>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="Contoh 1">
+          <img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=2" alt="Contoh 2">
+          <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="Contoh 3">
+          <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=4" alt="Contoh 4">
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <h2>Kontak</h2>
+        <div class="contact">
+          <form id="contactForm" onsubmit="return handleSubmit(event)" style="display:flex;flex-direction:column;gap:10px">
+            <div class="field">
+              <label for="name">Nama</label>
+              <input id="name" name="name" type="text" placeholder="Nama kamu" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="email@domain.com" required />
+            </div>
+            <div class="field">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tulis pesan..." required></textarea>
+            </div>
+            <button type="submit">Kirim</button>
+            <div id="status" aria-live="polite" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+          </form>
+
+          <div style="padding:12px">
+            <h3>Alamat</h3>
+            <p class="muted">Contoh alamat jalan — Kota, Negara</p>
+            <h3 style="margin-top:12px">Jam Operasional</h3>
+            <p class="muted">Senin - Jumat, 09:00 - 17:00</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> MySite. Dibuat dengan ❤️.
+    </footer>
+  </div>
+
+  <script>
+    // Isi tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Validasi & simulasi submit (tanpa backend)
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('status');
+
+      if(!name||!email||!message){
+        status.style.color='#b91c1c';
+        status.textContent = 'Mohon lengkapi semua kolom.';
+        return false;
+      }
+
+      // Simulasi pengiriman
+      status.style.color='#065f46';
+      status.textContent = 'Pesan terkirim. Terima kasih — (ini hanya simulasi).';
+
+      // Reset form setelah 1.2s
+      setTimeout(()=>{
+        e.target.reset();
+        status.textContent = '';
+      },1200);
+
+      return false;
+    }
+  </script>
+</body>
+</html>
