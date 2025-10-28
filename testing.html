@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Session 3: CSS Basics</title>
+    <style>
+        /* Internal CSS - diletakkan di dalam tag <style> */
+        .demo-box {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Session 3: CSS Basics (Cascading Style Sheets)</h1>
+    <p><strong>CSS = Cascading Style Sheets</strong> - Digunakan untuk styling tampilan website</p>
+
+    <hr>
+
+    <!-- 1. INLINE CSS -->
+    <h2>1. Inline CSS (Styling langsung di element)</h2>
+    <p style="color: blue; font-size: 20px;">Ini adalah teks dengan warna biru dan ukuran 20px</p>
+    <p style="background-color: yellow; padding: 10px;">Teks dengan background kuning dan padding</p>
+    <div style="border: 3px solid red; padding: 15px; width: 300px;">
+        Box dengan border merah
+    </div>
+
+    <hr>
+
+    <!-- 2. INTERNAL CSS (sudah didefinisikan di <style> atas) -->
+    <h2>2. Internal CSS (Di dalam tag &lt;style&gt;)</h2>
+    <div class="demo-box">
+        Ini menggunakan class "demo-box" yang didefinisikan di tag style
+    </div>
+
+    <hr>
+
+    <!-- 3. CSS COLORS -->
+    <h2>3. CSS Colors (Warna)</h2>
+    <p style="color: red;">Warna dengan nama: red</p>
+    <p style="color: #0000FF;">Warna dengan HEX: #0000FF (biru)</p>
+    <p style="color: rgb(0, 128, 0);">Warna dengan RGB: rgb(0, 128, 0) (hijau)</p>
+    <p style="background-color: orange; color: white; padding: 5px;">Background orange, text putih</p>
+
+    <hr>
+
+    <!-- 4. TEXT STYLING -->
+    <h2>4. Text Styling</h2>
+    <p style="font-size: 24px;">Font size 24px</p>
+    <p style="font-family: Arial;">Font family: Arial</p>
+    <p style="text-align: center;">Text align center</p>
+    <p style="text-align: right;">Text align right</p>
+    <p style="text-decoration: underline;">Text underline</p>
+    <p style="text-transform: uppercase;">text transform uppercase</p>
+    <p style="font-weight: bold;">Font weight bold</p>
+
+    <hr>
+
+    <!-- 5. BOX MODEL: MARGIN & PADDING -->
+    <h2>5. Box Model - Margin & Padding</h2>
+    <div style="background-color: lightblue; padding: 20px;">
+        <p style="background-color: white; margin: 0;">Padding = Jarak DALAM (20px dari tepi biru)</p>
+    </div>
+    <br>
+    <div style="background-color: lightgreen; margin: 30px; padding: 10px;">
+        Margin = Jarak LUAR (30px dari tepi), Padding = Jarak dalam (10px)
+    </div>
+
+    <hr>
+
+    <!-- 6. BORDER -->
+    <h2>6. Border (Garis Tepi)</h2>
+    <p style="border: 1px solid black; padding: 10px;">Border 1px solid black</p>
+    <p style="border: 3px dashed blue; padding: 10px;">Border 3px dashed blue</p>
+    <p style="border: 5px dotted red; padding: 10px;">Border 5px dotted red</p>
+    <p style="border: 2px solid green; border-radius: 10px; padding: 10px;">Border dengan border-radius (rounded corners)</p>
+
+    <hr>
+
+    <!-- 7. WIDTH & HEIGHT -->
+    <h2>7. Width & Height</h2>
+    <div style="width: 200px; height: 100px; background-color: coral;">
+        Width: 200px, Height: 100px
+    </div>
+    <br>
+    <div style="width: 50%; height: 80px; background-color: lightcoral;">
+        Width: 50% (dari lebar parent)
+    </div>
+
+    <hr>
+
+    <!-- 8. CLASS vs ID -->
+    <h2>8. Class vs ID Selector</h2>
+    <style>
+        /* Class - bisa dipakai berkali-kali */
+        .highlight {
+            background-color: yellow;
+            padding: 5px;
+        }
+        
+        /* ID - hanya untuk 1 element */
+        #special {
+            color: purple;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+    
+    <p class="highlight">Paragraph 1 dengan class "highlight"</p>
+    <p class="highlight">Paragraph 2 dengan class "highlight" yang sama</p>
+    <p id="special">Paragraph dengan ID "special" (hanya 1 element)</p>
+
+    <hr>
+
+    <!-- 9. MULTIPLE PROPERTIES -->
+    <h2>9. Kombinasi Multiple Properties</h2>
+    <div style="
+        width: 300px;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: lightblue;
+        border: 3px solid blue;
+        border-radius: 10px;
+        text-align: center;
+        font-family: Arial;
+        box-shadow: 5px 5px 10px gray;
+    ">
+        <h3 style="color: #333; margin-top: 0;">Profil Mahasiswa</h3>
+        <p>Nama : Najwa Sakura Affan</p>
+        <p>Jurusan : Produksi Media</p>
+        <p>Angkatan : 2025</p>
+    </div>
+
+    <hr>
+
+    <!-- 10. MENGGUNAKAN CSS FRAMEWORK ONLINE (CDN) -->
+    <h2>10. Menggunakan CSS Framework Online (CDN)</h2>
+    <p><strong>CDN = Content Delivery Network</strong> - Kita bisa langsung pakai CSS yang sudah dibuat orang lain tanpa download!</p>
+    
+    <h3>A. Bootstrap - Framework CSS Paling Populer</h3>
+    <p>Cara pakai: Tambahkan link ini di &lt;head&gt; tag:</p>
+    <code style="background-color: #f4f4f4; padding: 10px; display: block; margin: 10px 0;">
+        &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    </code>
+    
+    <p><strong>Contoh Button Bootstrap:</strong></p>
+    <button class="btn btn-primary" style="padding: 10px 20px; background-color: #0d6efd; color: white; border: none; border-radius: 5px; margin: 5px;">Primary Button</button>
+    <button class="btn btn-success" style="padding: 10px 20px; background-color: #198754; color: white; border: none; border-radius: 5px; margin: 5px;">Success Button</button>
+    <button class="btn btn-danger" style="padding: 10px 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; margin: 5px;">Danger Button</button>
+    <p style="font-size: 12px; color: gray;">*Button di atas dibuat manual, tapi dengan Bootstrap cukup tulis: &lt;button class="btn btn-primary"&gt;</p>
+
+    <br>
+
+    <h3>B. Tailwind CSS - Utility-First Framework</h3>
+    <p>Cara pakai: Tambahkan link ini di &lt;head&gt; tag:</p>
+    <code style="background-color: #f4f4f4; padding: 10px; display: block; margin: 10px 0;">
+        &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+    </code>
+    
+    <p><strong>Contoh dengan Tailwind:</strong></p>
+    <div style="background-color: #3b82f6; color: white; padding: 16px; border-radius: 8px; margin: 10px 0;">
+        <p style="margin: 0;">Dengan Tailwind: class="bg-blue-500 text-white p-4 rounded-lg"</p>
+    </div>
+
+    <br>
+
+    <h3>C. Font Awesome - Icon Library</h3>
+    <p>Cara pakai: Tambahkan link ini di &lt;head&gt; tag:</p>
+    <code style="background-color: #f4f4f4; padding: 10px; display: block; margin: 10px 0;">
+        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+    </code>
+    
+    <p><strong>Contoh Icon:</strong> ⭐ 🏠 📧 (dengan Font Awesome jadi lebih profesional)</p>
+    <p style="font-size: 12px; color: gray;">Tulis: &lt;i class="fas fa-home"&gt;&lt;/i&gt; untuk icon rumah</p>
+
+    <br>
+
+    <h3>D. Google Fonts - Font Cantik Gratis</h3>
+    <p>Cara pakai: Tambahkan link ini di &lt;head&gt; tag:</p>
+    <code style="background-color: #f4f4f4; padding: 10px; display: block; margin: 10px 0;">
+        &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+    </code>
+    
+    <p style="font-family: 'Times New Roman', serif;">Font default (Times New Roman)</p>
+    <p style="font-family: 'Arial', sans-serif; font-weight: bold;">Dengan Google Fonts bisa pakai font Roboto, Poppins, Montserrat, dll!</p>
+
+    <br>
+
+    <div style="background-color: #e3f2fd; padding: 20px; border-left: 4px solid #2196f3; margin: 20px 0;">
+        <h3 style="margin-top: 0; color: #1976d2;">💡 Keuntungan Pakai CSS Framework:</h3>
+        <ul style="margin-bottom: 0;">
+            <li>✅ Cepat membuat website cantik tanpa coding CSS banyak</li>
+            <li>✅ Sudah responsive (otomatis bagus di mobile)</li>
+            <li>✅ Sudah tested dan compatible semua browser</li>
+            <li>✅ Gratis dan banyak dokumentasi</li>
+        </ul>
+    </div>
+
+    <div style="background-color: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; margin: 20px 0;">
+        <h3 style="margin-top: 0; color: #856404;">⚠️ Kapan Pakai Framework vs CSS Manual?</h3>
+        <ul style="margin-bottom: 0;">
+            <li><strong>Pakai Framework:</strong> Project besar, butuh cepat, website profesional</li>
+            <li><strong>CSS Manual:</strong> Belajar fundamental, website sederhana, kontrol penuh</li>
+            <li><strong>Rekomendasi:</strong> Pelajari CSS dasar dulu, baru pakai framework!</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>Contoh Lengkap: Buat File Baru dengan Bootstrap</h2>
+    <div style="background-color: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; border-radius: 5px; font-family: monospace; font-size: 14px; overflow-x: auto;">
+<pre style="margin: 0; white-space: pre-wrap;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Website dengan Bootstrap&lt;/title&gt;
+    
+    &lt;!-- Link Bootstrap CSS dari CDN --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+          rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h1 class="text-primary"&gt;Hello Bootstrap!&lt;/h1&gt;
+        &lt;button class="btn btn-success"&gt;Click Me&lt;/button&gt;
+        
+        &lt;div class="alert alert-info mt-3"&gt;
+            Ini adalah alert box dari Bootstrap!
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    </div>
+
+    <p style="margin-top: 15px;"><strong>📌 Link Resource:</strong></p>
+    <ul>
+        <li>Bootstrap: <a href="https://getbootstrap.com" target="_blank">https://getbootstrap.com</a></li>
+        <li>Tailwind CSS: <a href="https://tailwindcss.com" target="_blank">https://tailwindcss.com</a></li>
+        <li>Font Awesome: <a href="https://fontawesome.com" target="_blank">https://fontawesome.com</a></li>
+        <li>Google Fonts: <a href="https://fonts.google.com" target="_blank">https://fonts.google.com</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>Tips:</h2>
+    <ul>
+        <li><strong>Inline CSS</strong>: Langsung di element (style="...")</li>
+        <li><strong>Internal CSS</strong>: Di dalam tag &lt;style&gt; di &lt;head&gt;</li>
+        <li><strong>External CSS</strong>: File .css terpisah (paling recommended)</li>
+        <li><strong>Class</strong>: Gunakan untuk styling yang dipakai berkali-kali (.classname)</li>
+        <li><strong>ID</strong>: Gunakan untuk styling element unik (#idname)</li>
+        <li><strong>CSS Framework</strong>: Pakai Bootstrap/Tailwind untuk project cepat dan profesional!</li>
+    </ul>
+
+</body>
+</html>
